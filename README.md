@@ -15,4 +15,43 @@ Like this:<br>
 
 //initDatePickView
 -(instancetype)initDatePickWithDate:(NSDate *)defaulDate datePickerMode:(UIDatePickerMode)datePickerMode isHaveNavControler:(BOOL)isHaveNavControler withTitle:(NSString*)titleStr;
+
+/**
+ *   remove pickView from superView
+ */
+-(void)remove;
+/**
+ *  show pickView at currentView
+ */
+-(void)show;
+/**
+ *  set pickView background color
+ */
+-(void)setPickViewColer:(UIColor *)color;
+/**
+ *  set toolbar TinColor
+ */
+-(void)setTintColor:(UIColor *)color;
+/**
+ *  set toolbar background color
+ */
+-(void)setToolbarTintColor:(UIColor *)color;
 ```
+
+Delegate
+============
+```c
+/**
+ *  @param pickVeiw  The pickView         
+ *  @param resultString Result of pickView
+ */
+-(void)toobarDonBtnHaveClick:(DavidPickView *)pickView resultString:(NSString *)resultString;
+```
+Call when click at confirmation button.
+```c
+/**
+ *  @param pickVeiw  The pickView         
+ */
+-(void)didClickCancelItem:(DavidPickView *)pickView;
+```
+Call when click at cancel button
