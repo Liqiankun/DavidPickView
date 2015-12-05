@@ -40,7 +40,7 @@ Like this:<br>
 
 Delegate
 ===========
-
+Call when click at confirmation button.
 ```c
 /**
  *  @param pickVeiw  The pickView         
@@ -48,11 +48,11 @@ Delegate
  */
 -(void)toobarDonBtnHaveClick:(DavidPickView *)pickView resultString:(NSString *)resultString;
 ```
-Call when click at confirmation button.
+Call when click at cancel button
 ```c
 /**
  *  @param pickVeiw  The pickView         
  */
 -(void)didClickCancelItem:(DavidPickView *)pickView;
 ```
-Call when click at cancel button
+
